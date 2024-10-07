@@ -50,7 +50,8 @@ def generate_launch_description():
                                 parameters=[parameter_file],
                                 arguments=['--ros-args', '--log-level', 'INFO'],
                                 namespace='/',
-                                remappings=[("/points", "/sensing/lidar/top/pointcloud_raw_ex")]
+                                remappings=[("/points", "/sensing/lidar/top/pointcloud_raw_ex"),
+                                            ("/imu", "/sensing/imu/imu_raw")]
                                 )
 
     configure_event = EmitEvent(
